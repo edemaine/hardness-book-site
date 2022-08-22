@@ -1,0 +1,20 @@
+{
+  "name": "hardness-book-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "astro": "1.0.6",
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "@typopro/web-linux-libertine": "^3.7.5",
+    "purecss": "^2.1.0"
+  }
+}

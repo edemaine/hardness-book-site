@@ -1,0 +1,101 @@
+:root
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem)
+  //--font-size-base: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem)
+  --font-size-lg: clamp(1.72rem, 1.54vw + 1.38rem, 2.47rem)
+  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem)
+
+  //--color-text: hsl(12, 5%, 4%)
+  //--color-bg: hsl(10, 21%, 95%)
+  --color-text: white
+  --color-bg: black
+  --color-border: hsl(183, 10%, 78%)
+  //--color-link: white
+  --color-link: hsl(65, 90%, 69%)
+  //--color-hover: hsl(65, 75%, 80%)
+  --color-hover: hsl(55, 75%, 63%)
+  // Based on MIT's #A31F34:
+  //--color-hover: hsl(350, 68%, 90%)
+
+html
+  font-family: "Linux Libertine", system-ui, serif
+  font-size: var(--font-size-base)
+  color: var(--color-text)
+  background-color: var(--color-bg)
+body
+  margin: 0
+a
+  color: var(--color-link)
+  transition: color 0.25s, background 0.25s, border 0.25s
+  &:active, &:hover
+    color: var(--color-hover)
+
+.header, .body
+  padding-inline: clamp(0.5rem, 5vw, 2rem)
+.header
+  background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 0%, 20%))
+  padding-bottom: 1px // force inclusion of .author margin-bottom
+
+  .title
+    font-size: var(--font-size-xl)
+    font-weight: bold
+    text-shadow: 2px 2px 2px gray
+    > .line
+      margin-block: 0.25em
+  .author
+    font-size: var(--font-size-lg)
+    font-weight: bold
+    font-style: italic
+  .title, .author, .publisher
+    text-align: center
+    margin-block: 0.75em
+
+hr
+  margin-inline: 10%
+  border: none
+  border-bottom: 1px solid var(--color-border)
+
+.card
+  margin-block: 2rem
+  .title, .body
+    border: solid var(--color-border)
+    border-radius: 1rem
+  .title
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    //background: hsl(292, 100%, 18%)
+    background: linear-gradient(to bottom, hsl(292, 100%, 18%), hsl(292, 100%, 10%))
+    font-size: var(--font-size-lg)
+    margin-top: 0
+    display: block
+    padding: 0.75rem 1.5rem
+  .body
+    background: hsl(0, 0%, 10%)
+    border-top: none
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    padding: 1.25rem 1.5rem
+    > :first-child
+      margin-top: 0
+    > :last-child
+      margin-bottom: 0
+
+.button
+  display: inline-block
+  text-decoration: none
+  border-radius: 0.5em
+  border: hsl(292, 50%, 40%) solid
+  background: hsl(292, 50%, 18%)
+  box-shadow: 0px 0px 5px hsl(292, 25%, 50%)
+  padding: 0.5em
+  &:hover, &:active
+    background: hsl(292, 50%, 13%)
+    border: hsl(292, 50%, 50%) solid
+
+.large
+  font-size: 140%
+
+.text-center
+  text-align: center
+
+//code
+//  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace

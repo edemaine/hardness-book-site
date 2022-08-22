@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro'
+import {dateFormat} from '../utils/dateFormat'
+import {lastDraft, lastUpdated} from '../utils/drafts'
+---
+<Layout title="Computers and Intractability: A Guide to Algorithmic Lower Bounds">
+  <div class="header">
+    <div class="title">
+      <div class="line">
+        Computers and Intractability:
+      </div>
+      <div class="line">
+        A Guide to Algorithmic Lower Bounds
+      </div>
+    </div>
+    <hr>
+    <div class="author">
+      by Erik&nbsp;D.&nbsp;Demaine, William&nbsp;Gasarch, and Mohammad&nbsp;Hajiaghayi
+    </div>
+    <div class="publisher">
+      MIT Press, 2024
+    </div>
+  </div>
+  <div class="body">
+
+  <div class="card">
+    <div class="title">
+      Book Draft
+    </div>
+    <div class="body">
+      <div class="text-center">
+        <a class="button large" href={'/drafts/'+lastDraft}>View Book Draft (PDF)</a>
+
+        <p><i>Last updated: {dateFormat(lastUpdated)}</i></p>
+      </div>
+
+      <p>
+      This is a <b><i>draft</i></b> of the book.
+      There will be typos, missing references, and other mistakes.
+      Please help us find them!
+      </p>
+
+      <p>
+      Send comments and suggestions for improvements to
+      <a href="mailto:hardness-book@mit.edu">hardness-book@mit.edu</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="title">
+      Copyright
+    </div>
+    <div class="body">
+      <p>
+        Copyright in this work has been licensed exclusively to
+        <a href="https://mitpress.mit.edu">The MIT Press</a>,
+        which will be releasing the final version to the public in 2024.
+        All inquiries regarding rights should be addressed to
+        the MIT Press, Rights and Permissions Department.
+      </p>
+    </div>
+  </div>
+
+  </div>
+</Layout>
