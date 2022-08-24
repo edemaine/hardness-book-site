@@ -32,9 +32,12 @@ import {lastDraft, lastUpdated} from '../utils/drafts'
     </div>
     <div class="body">
       <div class="text-center">
-        <a class="button large" href={'/drafts/'+lastDraft}>View Book Draft (PDF)</a>
-
-        <p><i>Last updated: {dateFormat(lastUpdated)}</i></p>
+        {lastDraft ?
+          <a class="button large" href={'/drafts/'+lastDraft}>View Book Draft (PDF)</a>
+          <p><i>Last updated: {dateFormat(lastUpdated)}</i></p>
+        :
+          <a class="button large" href="#">Book Draft Coming Soon!</a>
+        }
       </div>
 
       <p>
