@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@typopro/web-linux-libertine": "^3.7.5",
+    "astro-analytics": "^2.2.0",
     "purecss": "^2.1.0"
   }
 }

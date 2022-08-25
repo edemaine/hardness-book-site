@@ -1,4 +1,6 @@
 ---
+import {GoogleAnalytics} from 'astro-analytics';
+
 import 'purecss/build/buttons.css';
 import '../styles/libertine.sass';
 import '../styles/main.sass';
@@ -14,15 +16,8 @@ const {title} = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9ZM6J121Z"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-B9ZM6J121Z');
-    </script>
+    {import.meta.env.GTAG &&
+     <GoogleAnalytics id={import.meta.env.GTAG}}
   </head>
   <body>
     <slot/>
