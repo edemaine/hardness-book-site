@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish": "npm run build && rsync -av --no-g dist/ www/"
+    "publish": "npm run build && rsync -av --no-g dist/ www/",
+    "draft": "cp book.pdf public/drafts/`date -I`.pdf && ls -l public/drafts/`date -I`.pdf"
   },
   "devDependencies": {
     "astro": "1.0.6",
