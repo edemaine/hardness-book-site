@@ -1,8 +1,12 @@
-export const drafts = Object.keys(
-  import.meta.glob('../../public/drafts/*.pdf', {
-    query: '?raw',
-  })
-).map(name => name.replace(/^.*\//, ''))
+import fs from 'node:fs'
+
+const draftsDir = new URL('../../public/drafts/', import.meta.url)
+
+export const drafts = fs.existsSync(draftsDir)
+  ? fs.readdirSync(draftsDir, {withFileTypes: true})
+      .filter((entry) => entry.isFile() && /\.pdf$/i.test(entry.name))
+      .map((entry) => entry.name)
+  : []
 drafts.sort();
 console.log("Drafts:", drafts)
 if (!drafts.length) console.warn("NO DRAFTS! NOT LINKING TO ANYTHING.");
