@@ -1,5 +1,7 @@
 export const drafts = Object.keys(
-  import.meta.glob('../../public/drafts/*.pdf')
+  import.meta.glob('../../public/drafts/*.pdf', {
+    query: '?raw',
+  })
 ).map(name => name.replace(/^.*\//, ''))
 drafts.sort();
 console.log("Drafts:", drafts)
