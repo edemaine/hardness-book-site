@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-const draftsDir = new URL('../../public/drafts/', import.meta.url)
+const draftsDir = 'public/drafts'
 
 export const drafts = fs.existsSync(draftsDir)
   ? fs.readdirSync(draftsDir, {withFileTypes: true})
