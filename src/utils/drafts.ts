@@ -1,6 +1,5 @@
-import fs from 'node:fs'
 export const drafts = Object.keys(
-  await import.meta.glob('../../public/drafts/*.pdf', {as: 'raw'})
+  import.meta.glob('../../public/drafts/*.pdf')
 ).map(name => name.replace(/^.*\//, ''))
 drafts.sort();
 console.log("Drafts:", drafts)

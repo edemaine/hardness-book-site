@@ -12,8 +12,9 @@
     "draft": "cp book.pdf public/drafts/`date -I`.pdf && ls -l public/drafts/`date -I`.pdf"
   },
   "devDependencies": {
-    "astro": "1.0.6",
-    "sass": "^1.54.5"
+    "astro": "5.17.2",
+    "sass": "1.97.3",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@typopro/web-linux-libertine": "^3.7.5",

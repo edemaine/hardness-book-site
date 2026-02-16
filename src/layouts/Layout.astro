@@ -17,7 +17,7 @@ const {title} = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
     {import.meta.env.GTAG &&
-     <GoogleAnalytics id={import.meta.env.GTAG}}
+     <GoogleAnalytics id={import.meta.env.GTAG} />}
   </head>
   <body>
     <slot/>
