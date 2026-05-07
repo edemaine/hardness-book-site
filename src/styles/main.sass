@@ -34,6 +34,15 @@ a
 .header
   background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 0%, 20%))
   padding-bottom: 1px // force inclusion of .author margin-bottom
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: clamp(2rem, 2.5vw, 5rem)
+  padding-block: clamp(0.75rem, 2.5vw, 1.5rem)
+
+  .info
+    flex: 1
+    min-width: 0
 
   .title
     font-size: var(--font-size-xl)
@@ -48,6 +57,24 @@ a
   .title, .author, .publisher
     text-align: center
     margin-block: 0.75em
+  .cover
+    flex: 0.8
+    width: min(86vw, 30rem)
+    max-width: 30rem
+    img
+      display: block
+      width: 100%
+      height: auto
+      border-radius: 0.25rem
+      box-shadow: 0.35rem 0.45rem 0 hsl(0, 0%, 30%), 0.8rem 1rem 2rem hsl(0, 0%, 0%)
+
+@media (min-width: 45rem)
+  .header
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    .cover
+      width: clamp(18rem, 30vw, 28rem)
 
 .site-footer
   padding: 1rem clamp(0.5rem, 5vw, 2rem) 1.25rem
